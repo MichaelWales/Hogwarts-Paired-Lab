@@ -1,0 +1,20 @@
+<form action="/hogwarts" method="POST">
+  <label for="student">Student:</label>
+  <input id="student" type="text" name="first_name">
+  <input id="student" type="text" name="last_name">
+
+  <label for="house">House:</label>
+  <select name="" id="">
+    <% for house in @houses %>
+      <option value="<%= house.id %>">
+        <%= house.name() %>
+      </option>
+    <% end %>
+  </select>
+
+  <label for="age">Age:</label>
+    <input id="age" type="number" name="age">
+
+  <input type='submit' value="Add Student"/>
+
+</form>
