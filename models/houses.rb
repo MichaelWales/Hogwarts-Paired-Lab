@@ -23,12 +23,6 @@ class House
     return houses.map{|house| House.new(house)}
   end
 
-  def self.all()
-    sql = "SELECT * FROM houses"
-    houses = SqlRunner.run(sql)
-    return houses.map{|house| House.new(house)}
-  end
-
   def self.find(id)
     sql = "SELECT * FROM houses WHERE id = $1"
     values = [id]
